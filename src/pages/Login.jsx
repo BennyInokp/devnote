@@ -1,40 +1,40 @@
- import React, { useState } from "react";
- import book from "../assets/book.svg";
- import booklover from "../assets/booklover.svg";
- import { useNavigate } from "react-router-dom";
+import React, { useState } from "react";
+import book from "../assets/book.svg";
+import hero from "../assets/hero.svg";
+import { useNavigate } from "react-router-dom";
 
- export default function Login() {
-   const [email, setEmail] = useState("");
-   const [password, setPassword] = useState("");
+export default function Login() {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
 
-   const navigate = useNavigate();
+  const navigate = useNavigate();
 
-   const onChangeEmail = (e) => {
-     setEmail(e.target.value);
-   };
-   const onChangePassword = (e) => {
-     setPassword(e.target.value);
-   };
+  const onChangeEmail = (e) => {
+    setEmail(e.target.value);
+  };
+  const onChangePassword = (e) => {
+    setPassword(e.target.value);
+  };
 
   const onSubmit = (e) => {
-     e.preventDefault();
-     navigate("/");
-   };
+    e.preventDefault();
+    navigate("/");
+  };
 
-   return (
-     <div className="w-full h-screen flex justify-center bg-[#E5E5E5]">
-       <main className="w-[500px] bg-white px-6">
-         <header className="flex items-center gap-4 mt-12">
+  return (
+    <div className="w-full h-screen flex justify-center bg-[#E5E5E5]">
+      <main className="w-[500px] bg-white px-6">
+        <header className="flex items-center gap-4 mt-12">
           <img src={book} alt="book" />
           <p className="text-lg roboto">DevNote</p>
         </header>
 
-         <div className="mt-12">
-           <img src={booklover} alt="" className="w-full" />
-           <p className="text-lg roboto text-center">Log in</p>
-         </div>
+        <div className="mt-12">
+          <img src={hero} alt="" className="w-full" />
+          <p className="text-lg roboto text-center">Log in</p>
+        </div>
 
-         <form onSubmit={onSubmit} className="flex flex-col gap-4 mt-12">
+        <form onSubmit={onSubmit} className="flex flex-col gap-4 mt-12">
           <input
             type="email"
             value={email}
@@ -54,12 +54,12 @@
           </button>
         </form>
         <a
-          href="/signup"
+          href="/sign up"
           className="roboto text-[#FB6900] flex justify-center mt-4"
         >
           Not registered? Sign up here
         </a>
       </main>
     </div>
- );
- }
+  );
+}
