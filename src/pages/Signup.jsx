@@ -1,6 +1,6 @@
  import React, { useState } from "react";
 import book from "../assets/book.svg";
-import hero from "../assets/hero.svg";
+import hero from "../assets/booklover.svg";
 import { useNavigate } from "react-router-dom";
 
 export default function Signup() {

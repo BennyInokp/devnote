@@ -1,13 +1,13 @@
 import React, { Fragment } from "react";
 import { Menu, Transition } from "@headlessui/react";
-import dots from "../assets/dots.svg";
+import dot from "../assets/dot.svg";
 
 export default function Note({ note, onDelete, onEdit }) {
   return (
     <div className="border border-[#00000024] rounded-[5px] flex relative justify-between p-6 mt-8">
       <div className="w-[90%]">
-        <p className="text-lg capitalize mb-6">{note.title}</p>
-        <p className="roboto text-[#000000BA] font-light">{note.description}</p>
+        <p className="text-lg capitalize mb-6">{note?.title}</p>
+        <p className="roboto text-[#000000BA] font-light">{note?.description}</p>
         <span className="flex items-center gap-2 pt-8">
           <button className="bg-[#FA9F5E] rounded-[25px] px-4 py-2 text-white">
             Created
@@ -20,7 +20,7 @@ export default function Note({ note, onDelete, onEdit }) {
       <div>
         <Menu as="div" className=" flex items-center w-full">
           <Menu.Button>
-            <img src={dots} alt="" />
+            <img src={dot} alt="" />
           </Menu.Button>
           <Transition
             as={Fragment}

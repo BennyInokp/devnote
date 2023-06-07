@@ -2,10 +2,12 @@ import React, { useEffect, useState } from "react";
 import book from "../assets/book.svg";
 import line from "../assets/line.svg";
 import plus from "../assets/plus.svg";
+import dot from "../assets/dot.svg";
 import { v4 as uuidv4 } from "uuid";
 import Modal from "react-modal";
-import AddNotes from "../components/AddNotes";
-import Notes from "../components/Notes";
+import AddNotes from "./AddNotes";
+
+import Notes from "./Notes";
 import logo from '../logo.svg';
 
 export default function Home() {
@@ -107,7 +109,7 @@ export default function Home() {
         <header>
           <span className="flex items-center gap-4 mt-8 pl-6">
             <img src={book} alt="book" className="w-7 h-7" />
-            <p>Notes by Antonynans</p>
+            <p>Notes by Benedicta</p>
           </span>
 
           <img src={line} alt="" className="mb-2 mt-3 w-full" />
