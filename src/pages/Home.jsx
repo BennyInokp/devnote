@@ -7,6 +7,7 @@ import { v4 as uuidv4 } from "uuid";
 import Modal from "react-modal";
 import AddNotes from "./AddNotes";
 
+
 import Notes from "./Notes";
 import logo from '../logo.svg';
 
