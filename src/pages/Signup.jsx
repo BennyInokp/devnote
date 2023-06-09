@@ -1,11 +1,13 @@
  import React, { useState } from "react";
 import book from "../assets/book.svg";
-import hero from "../assets/booklover.svg";
+import booklover from "../assets/booklover.svg";
 import { useNavigate } from "react-router-dom";
 
 export default function Signup() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
 
   const navigate = useNavigate();
 
@@ -15,6 +17,14 @@ export default function Signup() {
   const onChangePassword = (e) => {
     setPassword(e.target.value);
   };
+  const onChangeFirstName = (e) => {
+    setFirstName(e.target.value);
+  };
+  const onChangeLastName = (e) => {
+    setLastName(e.target.value);
+  };
+
+
 
   const onSubmit = (e) => {
     e.preventDefault();
@@ -30,7 +40,7 @@ export default function Signup() {
         </header>
 
         <div className="mt-12">
-          <img src={hero} alt="" className="w-full" />
+          <img src={booklover} alt="" className="w-full" />
           <p className="text-lg roboto text-center">Sign up</p>
         </div>
 
@@ -49,6 +59,23 @@ export default function Signup() {
             onChange={onChangePassword}
             className="h-14 border border-[#FB6900] rounded-[5px] outline-none px-6"
           />
+          <input
+            type="firstName"
+            value={firstName}
+            placeholder="First Name"
+            onChange={onChangeFirstName}
+            className="h-14 border border-[#FB6900] rounded-[5px] outline-none px-6"
+          />
+
+          <input
+            type="lastName"
+            value={lastName}
+            placeholder="last Name"
+            onChange={onChangeLastName}
+            className="h-14 border border-[#FB6900] rounded-[5px] outline-none px-6"
+          />
+          
+
           <button className="bg-[#FB6900] text-white text-lg h-14 rounded-[5px] roboto">
             Sign up
           </button>
